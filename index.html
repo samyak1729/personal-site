@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Name: Personal Website</title>
+  <style>
+    body {
+      font-family:'Lucida Console', monospace;
+      font-size: 18px;
+      color: #111;
+      background-color: white;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 50px;
+      box-sizing: border-box;
+    }
+    .landing {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height:100vh; min-height:100dvh;
+      text-align: center;
+    }
+    svg { width: 100%; height: auto; }
+    .svg-container { width: 100%; max-width: 400px; display: inline-block; }
+    .separator { letter-spacing: -9px; }
+    hr { border: none; height: 2px; background-color: lightgrey; width: 100%; margin: 30px auto; }
+    table { border-collapse: collapse; text-align: center; width: 100%; }
+    td {
+      padding: 5px 20px;
+      border: 1px solid #dddddd;
+    }
+    .quiet, .links-container a { color: inherit; }
+    .links-container { font-size: 24px; margin: 20px; }
+    .links-container a { text-decoration: none; margin: 0 10px; }
+    .product-photo { display: block; max-width: 640px; width: 100%; margin: 0 auto; }
+    .faqtable dt { margin-bottom: 0.75em; font-style: italic; }
+    .faqtable dd { margin-left: 0; margin-bottom: 2em; }
+  </style>
+</head>
+<body>
+  <div class="landing">
+    <div class="svg-container">
+      <svg viewBox="0 0 130 50" xmlns="http://www.w3.org/2000/svg">
+        <!-- Your custom SVG logo -->
+        <!-- You can create your own SVG logo or use a text placeholder here -->
+        <text x="10" y="30" font-family="Lucida Console" font-size="24" fill="#000000"> >> samyak</text>
+      </svg>
+    </div>
+    <div class="links-container">
+      <a href="#intro">home</a><span class="separator">|</span>
+      <a href="#about">about me</a><span class="separator">|</span>
+      <a href="#projects">projects</a><span class="separator">|</span>
+      <a href="#contact">contact</a>
+    </div>
+  </div>
+
+  <hr>
+  <h2 id="intro">welcome</h2>
+  <p>i am <strong>samyak</strong>, a 20 y/o cs undergrad with a keen interest in ml</p>
+
+  <hr>
+  <h2 id="about">about Me</h2>
+  <p>attending uni in the day and building projects at night. i love anime, food and sleep</p>
+
+  <hr>
+  <h2 id="projects">Projects</h2>
+  <p>Here are some of my recent projects:</p>
+  <ul>
+    <li><a href="https://github.com/yourusername/project1">Project 1</a>: A brief description of what this project is about.</li>
+    <li><a href="https://github.com/yourusername/project2">Project 2</a>: A brief description of what this project is about.</li>
+    <li><a href="https://github.com/yourusername/project3">Project 3</a>: A brief description of what this project is about.</li>
+  </ul>
+
+  <hr>
+  <h2 id="contact">contact</h2>
+  <p>feel free to reach out to me via <a href="https://x.com/samyak1729"> twitter</a> or drop me a message on <a href="www.linkedin.com/in/samyak-bharsakle-15ba88292">LinkedIn</a>.</p>
+
+</body>
+</html>
