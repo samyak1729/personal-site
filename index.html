@@ -1,81 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Your Name: Personal Website</title>
+  <meta charset="UTF-8" />
+  <title>Samyak Bharsakle: Personal Website</title>
+  <link href="https://unpkg.com/lucide@latest/dist/lu.min.css" rel="stylesheet" />
   <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #111111;
+      --link-color: #111111;
+    }
+
+    body.dark {
+      --bg-color: #111111;
+      --text-color: #f5f5f5;
+      --link-color: #bbbbbb;
+    }
+
     body {
-      font-family:'Lucida Console', monospace;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Lucida Console', monospace;
       font-size: 18px;
-      color: #111;
-      background-color: white;
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 50px;
       box-sizing: border-box;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
+
+    a {
+      color: var(--link-color) !important;
+      text-decoration: none;
+    }
+
     .landing {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height:100vh; min-height:100dvh;
+      min-height: 100vh;
       text-align: center;
+      position: relative;
     }
-    svg { width: 100%; height: auto; }
-    .svg-container { width: 100%; max-width: 400px; display: inline-block; }
-    .separator { letter-spacing: -9px; }
-    hr { border: none; height: 2px; background-color: lightgrey; width: 100%; margin: 30px auto; }
-    table { border-collapse: collapse; text-align: center; width: 100%; }
-    td {
-      padding: 5px 20px;
-      border: 1px solid #dddddd;
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-color);
     }
-    .quiet, .links-container a { color: inherit; }
-    .links-container { font-size: 24px; margin: 20px; }
-    .links-container a { text-decoration: none; margin: 0 10px; }
-    .product-photo { display: block; max-width: 640px; width: 100%; margin: 0 auto; }
-    .faqtable dt { margin-bottom: 0.75em; font-style: italic; }
-    .faqtable dd { margin-left: 0; margin-bottom: 2em; }
+
+    .theme-toggle svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .svg-container {
+      width: 100%;
+      max-width: 400px;
+      display: inline-block;
+    }
+
+    .svg-container svg text {
+      fill: currentColor;
+    }
+
+    .separator {
+      letter-spacing: -9px;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background-color: lightgrey;
+      width: 100%;
+      margin: 30px auto;
+    }
+
+    .links-container {
+      font-size: 24px;
+      margin: 20px;
+    }
+
+    .links-container a {
+      margin: 0 10px;
+    }
+
+    .product-photo {
+      display: block;
+      max-width: 640px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .faqtable dt {
+      margin-bottom: 0.75em;
+      font-style: italic;
+    }
+
+    .faqtable dd {
+      margin-left: 0;
+      margin-bottom: 2em;
+    }
   </style>
 </head>
 <body>
   <div class="landing">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+      <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" />
+      </svg>
+    </button>
+
     <div class="svg-container">
-      <svg viewBox="0 0 130 50" xmlns="http://www.w3.org/2000/svg">
-        <!-- Your custom SVG logo -->
-        <!-- You can create your own SVG logo or use a text placeholder here -->
-        <text x="10" y="30" font-family="Lucida Console" font-size="24" fill="#000000"> >> samyak</text>
+      <svg viewBox="0 0 180 50" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="35" font-family="'Lucida Console', monospace" font-size="28" font-weight="bold" fill="currentColor">
+          &gt;&gt; samyak
+        </text>
       </svg>
     </div>
+
     <div class="links-container">
       <a href="#intro">home</a><span class="separator">|</span>
       <a href="#about">about me</a><span class="separator">|</span>
       <a href="#projects">projects</a><span class="separator">|</span>
-      <a href="#contact">contact</a>
+      <a href="#blog">blog</a><span class="separator">|</span>
+      <a href="#contact">contact</a><span class="separator">|</span>
+      <a href="#fund">fund</a>
     </div>
   </div>
 
   <hr>
   <h2 id="intro">welcome</h2>
-  <p>i am <strong>samyak</strong>, a 20 y/o cs undergrad with a keen interest in ml</p>
+  <p>i'm <strong>samyak</strong>. 21. cs undergrad. currently working on building agentic systems. experimenting with how companies — tech and non-tech — can use agents to reduce operational overhead. also involved in a research project on early parkinson’s detection (paused for now).</p>
 
   <hr>
-  <h2 id="about">about Me</h2>
-  <p>attending uni in the day and building projects at night. i love anime, food and sleep</p>
+  <h2 id="about">about me</h2>
+  <p>interested in agents, preventive healthcare, and figuring out how to apply both. spend time testing ideas, exploring random topics with notebooklm, and watching anime. mostly trying to find problems worth solving.</p>
 
   <hr>
-  <h2 id="projects">Projects</h2>
-  <p>Here are some of my recent projects:</p>
+  <h2 id="projects">projects</h2>
+  <p>Here’s a list of current and upcoming work:</p>
   <ul>
-    <li><a href="https://github.com/yourusername/project1">Project 1</a>: A brief description of what this project is about.</li>
-    <li><a href="https://github.com/yourusername/project2">Project 2</a>: A brief description of what this project is about.</li>
-    <li><a href="https://github.com/yourusername/project3">Project 3</a>: A brief description of what this project is about.</li>
+    <li><strong><a href="https://github.com/samyak1729/deep-research">deep research from scratch</a></strong> (ongoing)
+      <ul>
+        <li>rough implementation of deep research as seen in chatgpt, grok, gemini, etc</li>
+        <li>makes use of gemini 1.5 flash and tavily for websearch</li>
+      </ul>
+    </li>
+    <li><strong>chatbot with tool call</strong>
+      <ul>
+        <li>Currently undergoing updates. The bot integrates with external tools to enhance user interaction.</li>
+      </ul>
+    </li>
+  </ul>
+  <p>future ideas:</p>
+  <ul>
+    <li><strong>browser agent from scratch</strong></li>
+    <li><strong>toy Agentic framework</strong></li>
+  </ul>
+
+  <hr>
+  <h2 id="blog">blog</h2>
+  <p>writings on building agents, research experiments, and whatever’s currently breaking.</p>
+  <ul>
+    <li><strong>RAG for Beginners (3-part series)</strong>
+      <ul>
+        <li><a href="https://www.notion.so/samyak-b/RAG-for-Beginners-Part-1-Building-Ingestion-and-Chunking-from-Scratch-1bfd0f70812080dc9063f9ba51d70df9">part 1</a> – building ingestion and chunking from scratch.</li>
+        <li><a href="https://www.notion.so/samyak-b/RAG-for-Beginners-Part-2-Adding-Embeddings-and-a-Vector-Store-with-Cohere-and-Pinecone-1d2d0f70812080f09258e1cf78e335f2">part 2</a> – adding embeddings + vector store with cohere + pinecone.</li>
+        <li><a href="https://www.notion.so/samyak-b/RAG-for-Beginners-Part-3-Adding-an-LLM-with-Gemini-2-0-Flash-1d2d0f70812080e5b199f79fa16bb712">part 3</a> – querying with gemini 2.0 flash.</li>
+      </ul>
+    </li>
+    <li><strong>deep research from scratch</strong> – coming soon.</li>
   </ul>
 
   <hr>
   <h2 id="contact">contact</h2>
-  <p>feel free to reach out to me via <a href="https://x.com/samyak1729"> twitter</a> or drop me a message on <a href="www.linkedin.com/in/samyak-bharsakle-15ba88292">LinkedIn</a>.</p>
+  <p>feel free to reach out to me via <a href="https://x.com/samyak1729">twitter</a>, <a href="https://www.linkedin.com/in/samyak-bharsakle-15ba88292">linkedin</a>, or email me at <a href="mailto:samyak5jan@gmail.com">samyak5jan@gmail.com</a>.</p>
 
+  <hr>
+  <h2 id="fund">fund my thinkpad</h2>
+  <p>if you have found my blogs or tweets helpful you can fund my thinkpad</p>
+  <p><a href="https://paypal.me/SamyakBharsakle?country.x=IN&locale.x=en_GB">paypal.me/SamyakBharsakle</a></p>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
 </body>
 </html>
